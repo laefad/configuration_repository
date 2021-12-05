@@ -8,7 +8,7 @@ security:
     client:
       clientId: qraphqlbooks-service
       clientSecret: ${QRAPHQLBOOKS_SERVICE_PASSWORD}
-      accessTokenUri: http://auth-service:5000/uaa/oauth/token
+      accessTokenUri: http://auth-service:8000/uaa/oauth/token
       grant-type: client_credentials
       scope: server
 
