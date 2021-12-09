@@ -44,7 +44,5 @@ spring:
               action: create
               create-target: create.sql
               create-source: metadata
-  main:
-    allow-bean-definition-overriding: true
 
             
