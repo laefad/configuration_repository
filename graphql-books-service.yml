@@ -24,8 +24,6 @@ graphql:
 #   show-sql: true
 
 spring:
-  # main:
-  #   allow-bean-definition-overriding: true
   datasource:
     url: ${POSTGRESBD_URL}
     username: ${POSTGRESBD_USERNAME}

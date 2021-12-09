@@ -13,40 +13,15 @@ ribbon:
 spring:
   cloud:
     gateway:
-      # httpclient:
-      #   connect-timeout: 20000
       routes:
         - id: auth-service
           uri: lb://auth-service
           predicates:
             - Path=/uaa/**
-          # filters:
-          #   - StripPrefix=0
         - id: graphql-books-service
           uri: lb://graphql-books-service
           predicates:
             - Path=/api/books/**
-          # filters:
-          #   - StripPrefix=0
-
-# zuul:
-#   ignoredServices: '*'
-#   host:
-#     connect-timeout-millis: 20000
-#     socket-timeout-millis: 20000
-
-#   routes:
-#     auth-service:
-#         path: /uaa/**
-#         url: auth-service
-#         stripPrefix: false
-#         sensitiveHeaders:
-    
-#     qraphqlbooks-service:
-#         path: /api/books/**
-#         serviceId: graphql-books-service
-#         stripPrefix: false
-#         sensitiveHeaders:
 
 server:
   port: 8000

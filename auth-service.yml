@@ -4,13 +4,6 @@ spring:
     username: ${POSTGRESBD_USERNAME}
     password: ${POSTGRESBD_PASSWORD}
     driver-class-name: org.postgresql.Driver
-    # data:
-    # mongodb:
-    #   host: auth-mongodb
-    #   username: user
-    #   password: ${MONGODB_PASSWORD}
-    #   database: piggymetrics
-    #   port: 27017
 
 server:
   servlet:
