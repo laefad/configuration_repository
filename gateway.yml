@@ -23,11 +23,11 @@ spring:
           # filters:
           #   - StripPrefix=0
         - id: graphql-books-service
-            uri: lb://graphql-books-service
-            predicates:
-              - Path=/api/books/**
-            # filters:
-            #   - StripPrefix=0
+          uri: lb://graphql-books-service
+          predicates:
+            - Path=/api/books/**
+          # filters:
+          #   - StripPrefix=0
 
 # zuul:
 #   ignoredServices: '*'
