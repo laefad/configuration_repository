@@ -22,22 +22,10 @@ zuul:
         url: auth-service
         stripPrefix: false
         sensitiveHeaders:
-
-    # account-service:
-    #     path: /accounts/**
-    #     serviceId: account-service
-    #     stripPrefix: false
-    #     sensitiveHeaders:
-
-    # statistics-service:
-    #     path: /statistics/**
-    #     serviceId: statistics-service
-    #     stripPrefix: false
-    #     sensitiveHeaders:
     
     qraphqlbooks-service:
         path: /api/books/**
-        serviceId: qraphqlbooks-service
+        serviceId: graphql=books-service
         stripPrefix: false
         sensitiveHeaders:
 
