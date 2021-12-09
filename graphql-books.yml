@@ -18,10 +18,10 @@ graphql:
     mapping: /graphiql
     enabled: true
 
-hibernate:
-  hbm2ddl:  
-    auto: create-drop
-  show-sql: true
+# hibernate:
+#   hbm2ddl:  
+#     auto: create-drop
+#   show-sql: true
 
 spring:
   datasource:
@@ -35,14 +35,14 @@ spring:
       ddl-auto: create-drop
       hbm2ddl:  
         auto: create-drop
-    # show-sql: true
-    # properties:
-    #   javax:
-    #     persistence:
-    #       schema-generation:
-    #         scripts:
-    #           action: create
-    #           create-target: create.sql
-    #           create-source: metadata
+    show-sql: true
+    properties:
+      javax:
+        persistence:
+          schema-generation:
+            scripts:
+              action: create
+              create-target: create.sql
+              create-source: metadata
 
             
