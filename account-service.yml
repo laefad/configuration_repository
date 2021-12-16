@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: ${POSTGRESBD_URL}
+    username: ${POSTGRESBD_USERNAME}
+    password: ${POSTGRESBD_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+server:
+  servlet:
+    context-path: /account
+  port: 8000
