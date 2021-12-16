@@ -20,6 +20,8 @@ eureka:
 security:
   oauth2:
     resource:
+      jwk:
+        key-set-uri: https://auth-service:8000/uaa/.well-known/jwks.json
       user-info-uri: http://auth-service:8000/uaa/users/current
 
 spring:
