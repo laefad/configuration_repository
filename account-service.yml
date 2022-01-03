@@ -5,14 +5,14 @@ spring:
     password: ${POSTGRESBD_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
-security:
-  oauth2:
-    client:
-      clientId: account-service
-      clientSecret: ${ACCOUNT_SERVICE_PASSWORD}
-      accessTokenUri: http://auth-service:8000/uaa/oauth/token
-      grant-type: client_credentials
-      scope: server
+# security:
+#   oauth2:
+#     client:
+#       clientId: account-service
+#       clientSecret: ${ACCOUNT_SERVICE_PASSWORD}
+#       accessTokenUri: http://auth-service:8000/uaa/oauth/token
+#       grant-type: client_credentials
+#       scope: server
 
 server:
   servlet:

@@ -1,16 +1,5 @@
 server:
-  # servlet:
-  #   context-path: 
   port: 8000
-
-security:
-  oauth2:
-    client:
-      clientId: books-service
-      clientSecret: ${BOOKS_SERVICE_PASSWORD}
-      accessTokenUri: http://auth-service:8000/uaa/oauth/token
-      grant-type: client_credentials
-      scope: server
 
 spring:
   datasource:
@@ -30,6 +19,18 @@ spring:
   jpa:
     show-sql: true
 
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            issuer-uri: ${OAUTH2_PROVIDER_ISSUER_URI}
+        registration:
+          keycloak:
+            client-id: ${OAUTH2_REGISTRATION_CLIENT_ID}
+            client-secret: ${OAUTH2_REGISTRATION_CLIENT_SECRET}
+            client-authentication-method: client_secret_jwt
+            authorization-grant-type: client_credentials
 
 management:
   endpoints:

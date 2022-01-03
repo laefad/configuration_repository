@@ -22,8 +22,8 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://auth-service:8000/uaa
-          jwk-set-uri: http://auth-service:8000/uaa
+          issuer-uri: ${OAUTH2_RESOURCESERVER_JWT_URI}
+          jwk-set-uri: ${OAUTH2_RESOURCESERVER_JWT_URI}
           
   rabbitmq:
     host: rabbitmq
